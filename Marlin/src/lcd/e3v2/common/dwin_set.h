@@ -25,7 +25,7 @@
 #define Language_English    1
 #define Language_Chinese    2
 
-#define ICON 7 // 7.ICO
+#define ICON 9 // 7.ICO
 
 #ifndef CORP_WEBSITE
   #define CORP_WEBSITE WEBSITE_URL
