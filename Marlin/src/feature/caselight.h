@@ -39,7 +39,13 @@ public:
 
   static void init() {
     #if NEED_CASE_LIGHT_PIN
-      if (pin_is_pwm()) SET_PWM(CASE_LIGHT_PIN); else SET_OUTPUT(CASE_LIGHT_PIN);
+      if (pin_is_pwm())
+      {
+        SET_PWM(CASE_LIGHT_PIN);
+        #ifdef CASE_LIGHT_FREQ
+          hal.set_pwm_frequency(pin_t(CASE_LIGHT_PIN), CASE_LIGHT_FREQ);
+        #endif
+      }else SET_OUTPUT(CASE_LIGHT_PIN);
     #endif
     update_brightness();
   }
