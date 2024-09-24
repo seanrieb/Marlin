@@ -1232,7 +1232,7 @@ void JyersDWIN::menuItemHandler(const uint8_t menu, const uint8_t item, bool dra
           break;
         case HOME_Y:
           if (draw)
-            drawMenuItem(row, ICON_MoveY, GET_TEXT_F(MSG_AUTO_HOME_X));
+            drawMenuItem(row, ICON_MoveY, GET_TEXT_F(MSG_AUTO_HOME_Y));
           else {
             popupHandler(Popup_Home);
             gcode.process_subcommands_now(F("G28Y"));
@@ -1242,7 +1242,7 @@ void JyersDWIN::menuItemHandler(const uint8_t menu, const uint8_t item, bool dra
           break;
         case HOME_Z:
           if (draw)
-            drawMenuItem(row, ICON_MoveZ, GET_TEXT_F(MSG_AUTO_HOME_X));
+            drawMenuItem(row, ICON_MoveZ, GET_TEXT_F(MSG_AUTO_HOME_Z));
           else {
             popupHandler(Popup_Home);
             gcode.process_subcommands_now(F("G28Z"));
